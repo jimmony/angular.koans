@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "server": "nodemon server/",
-    "start": "live-server"
+    "server": "nodemon server/"
   },
   "keywords": [
     "angular",
@@ -17,6 +16,7 @@
   "author": "davy@philos.io",
   "license": "MIT",
   "dependencies": {
+    "angular-route": "^1.4.9",
     "cors": "^2.7.1",
     "express": "^4.13.4"
   },
