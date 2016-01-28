@@ -15,20 +15,8 @@
   </head>
   <body class="grey lighten-5">
 
-    <nav class="teal darken-3">
-      <div class="nav-wrapper">
-        <a href="#/" class="brand-logo">Bookstore</a>
-        <form class="right col">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="mdi-action-search prefix"></i>
-              <a class="btn-floating btn-large waves-effect waves-light" href="#/books/add"><i class="mdi-content-add"></i></a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </nav>
 
+  <div  ng-include="'modules/common/nav/nav.html'"></div>
     <div ng-view></div>
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -37,12 +25,18 @@
     <script src="../../node_modules/angular-route/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.9/toaster.min.js"></script>
 
-    <script src="books.js"></script>
-    <script src="./components/routes.js"></script>
-    <script src="./components/nav/navcontroller.js"></script>
-    <script src="./components/book/services/bookservice.js"></script>
-    <script src="./components/book/detail/bookdetailscontroller.js"></script>
-    <script src="./components/book/add/bookaddcontroller.js"></script>
-    <script src="./components/book/list/booklistcontroller.js"></script>
+    <script src="modules/common/index.js"></script>
+    <script src="modules/book/index.js"></script>
+    <script src="index.js"></script>
+
+    <script src="routes.js"></script>
+
+    <script src="modules/common/nav/navcontroller.js"></script>
+
+    <script src="modules/book/services/bookservice.js"></script>
+    <script src="modules/book/detail/bookdetailscontroller.js"></script>
+    <script src="modules/book/add/bookaddcontroller.js"></script>
+    <script src="modules/book/list/booklistcontroller.js"></script>
+
   </body>
 </html>
