@@ -1,14 +1,9 @@
-(function() {
 
     BookFactory.$inject = ['$http'];
 
-    function BookFactory($http) {
+    export default function BookFactory($http) {
         function getBook(id) {
-            var found = books.filter((book) => book.bookID == id);
-            if (found[0]) {
-                return found[0]
-            }
-            return null;
+            return $http.get('http://localhost:9000/api/books/{$id}');
         }
 
         function getBooks() {
@@ -48,5 +43,4 @@
         };
 
     }
-    angular.module('book').factory('BookFactory',BookFactory);
-})();
+

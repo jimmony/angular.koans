@@ -1,16 +1,13 @@
+import angular from 'angular';
+import ngRoute from 'angular-route';
+import common from './modules/common/';
+import book from './modules/book/';
+import routeConfig from './routes';
 
-(function() {
 
-  'use strict';
+    angular.module('bookstore', ['common','ngRoute','book'])
+      .config(routeConfig);
 
-  angular.module('bookstoreDJ', ['common','ngRoute','book']);
-  //.config(RouteConfig);
-
-  //.controller('NavController', NavController);
   document.addEventListener('DOMContentLoaded',function(){
-    angular.bootstrap(document.body, ['bookstoreDJ']);
+    angular.bootstrap(document.body, ['bookstore']);
   });
-
-
-})();
-

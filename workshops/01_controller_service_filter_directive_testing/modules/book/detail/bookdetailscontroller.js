@@ -1,23 +1,15 @@
-(function() {
 
     BookDetailsController.$inject =['$scope','$routeParams','BookFactory'];
 
-    function BookDetailsController($scope, $routeParams, BookFactory) {
+    export default function BookDetailsController($routeParams, BookFactory) {
 
+        this.book = null;
         if ($routeParams.id) {
-            $scope.book = BookFactory.getBook($routeParams.id);
-        } else {
-            $scope.book = {
-                covers: ['assets/img/angularjs.jpg', 'assets/img/coman.jpeg'],
-                add: function () {
-                    debugger
-                    addBook();
-                }
-            }
+            $scope.book = BookFactory.getBook($routeParams.id).then((response)=>{
+                this.book = response.data;
+            });
         }
 
 
 
     }
-    angular.module('book').controller('BookDetailsController',BookDetailsController);
-})();

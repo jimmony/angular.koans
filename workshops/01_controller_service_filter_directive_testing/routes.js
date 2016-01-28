@@ -1,8 +1,7 @@
-(function() {
 
-    RouteConfig.$inject = ['$routeProvider'];
+    routeConfig.$inject = ['$routeProvider'];
 
-    function RouteConfig($routeProvider) {
+    export default function routeConfig($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: './modules/book/list/book.html',
@@ -19,6 +18,6 @@
             });
     }
 
-    angular.module('book').config(RouteConfig);
-})();
+
+
 

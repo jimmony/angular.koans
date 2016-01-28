@@ -1,4 +1,3 @@
-(function() {
 
     BookAddController.$inject=['$scope','$routeParams','BookFactory'];
 
@@ -12,5 +11,3 @@
 
 
     }
-    angular.module('book').controller('BookAddController',BookAddController);
-})();

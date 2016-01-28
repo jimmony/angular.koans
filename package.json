@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server",
-    "server": "nodemon server/"
+    "server": "nodemon server/",
+    "build": "webpack -w"
   },
   "keywords": [
     "angular",
@@ -31,6 +32,7 @@
     "live-server": "^0.9.1",
     "mocha": "^2.3.4",
     "nodemon": "^1.8.1",
-    "style-loader": "^0.13.0"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.12"
   }
 }

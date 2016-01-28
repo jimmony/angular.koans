@@ -1,8 +1,7 @@
-(function() {
 
     BookListController.$inject = ['BookFactory'];
 
-    function BookListController(BookFactory) {
+    export default function BookListController(BookFactory) {
 
 
          BookFactory.getBooks().then(function(response){
@@ -11,5 +10,3 @@
 
 
     }
-    angular.module('book').controller('BookListController',BookListController);
-})();
